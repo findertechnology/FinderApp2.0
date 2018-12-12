@@ -78,6 +78,14 @@ h1 {
     text-align:center;
 }
 
+h3{
+	text-align: center;
+	width: 100%;
+	font-family: "Open Sans"; 
+	font-size: 20px;
+	padding-top: 10%;
+}
+
 .event {
     border-radius:4px;
     -webkit-border-radius:4px;
@@ -112,4 +120,35 @@ h1 {
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
+}
+
+#general{
+	margin-top: 15%;
+}
+
+.obj{
+	float: left;
+	width: 46%;
+	height: 25%;
+	padding: 2%;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  opacity: 0;
+  transition: .3s ease;
+}
+
+.container:hover .overlay {
+  opacity: 1;
 }
