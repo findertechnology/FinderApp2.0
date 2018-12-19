@@ -1,0 +1,54 @@
+
+
+body {
+    background-color:#222222;
+	height:100%;
+    margin:0px;
+    padding:0px;
+}
+h3{
+	text-align: center;
+	width: 100%;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	color: #fefefe;
+	margin-left: -10%;
+}
+
+.obj{
+	float: left;
+	width: 46%;
+	height: 25%;
+	padding: 2%;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  opacity: 0;
+  transition: .3s ease;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+#back{
+	color: #fefefe;
+	float: left;
+	font-size: 30px;
+	padding-left: 10%;
+}
+
+#back:hover{
+	color: #4595E5;
+}
