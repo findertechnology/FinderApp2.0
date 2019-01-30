@@ -48,10 +48,10 @@ function deseleccion(elem){
 	}
 	
 }
-*/
+
 
 function callFinderprices(){
 	window.location = "html/finderprices.html";
 }
 
-document.getElementById("finderprices").addEventListener("click", callFinderprices);
+document.getElementById("finderprices").addEventListener("click", callFinderprices);*/

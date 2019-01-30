@@ -12,6 +12,7 @@ h3{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 20px;
 	color: #fefefe;
+	margin-left: -10%;
 }
 
 .obj{
@@ -39,4 +40,15 @@ h3{
 
 .container:hover .overlay {
   opacity: 1;
+}
+
+#back{
+	color: #fefefe;
+	float: left;
+	font-size: 30px;
+	padding-left: 10%;
+}
+
+#back:hover{
+	color: #4595E5;
 }

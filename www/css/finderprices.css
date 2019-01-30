@@ -52,3 +52,21 @@ h3{
 #back:hover{
 	color: #4595E5;
 }
+.mvir{
+	width: 47%;
+	background-color: black;
+}
+@media only screen and (max-width: 410px) {
+	.mvir {
+		width: 92%;
+		text-align: center;
+		padding-left: 5%;
+	}
+}
+
+span{
+	color: white;
+}
+.info{
+	color: white;
+}

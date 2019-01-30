@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Dec 19 14:24:32 CET 2018
+#Wed Jan 30 14:13:48 CET 2019
 17.baseType=DIRECTORY
 4.path=www/cordova.js
 8.set=ASSET
@@ -11,7 +11,7 @@
 16.set=ASSET
 count=21
 6.base=C\:\\Users\\Stopless\\Findertech\\FinderApp2.0\\platforms\\android\\app\\build\\intermediates\\assets\\debug
-13.path=www/img/logo.png
+13.path=www/js/finderprices.js
 6.baseType=DIRECTORY
 2.set=ASSET
 5.path=www/cordova-js-src/exec.js
@@ -23,7 +23,7 @@ count=21
 10.baseType=DIRECTORY
 15.base=C\:\\Users\\Stopless\\Findertech\\FinderApp2.0\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 7.base=C\:\\Users\\Stopless\\Findertech\\FinderApp2.0\\platforms\\android\\app\\build\\intermediates\\assets\\debug
-14.path=www/img/finderprices.png
+14.path=www/img/logo.png
 15.set=ASSET
 6.path=www/css/index.css
 1.base=C\:\\Users\\Stopless\\Findertech\\FinderApp2.0\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
@@ -35,7 +35,7 @@ count=21
 20.path=www/js/index.js
 16.base=C\:\\Users\\Stopless\\Findertech\\FinderApp2.0\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 8.base=C\:\\Users\\Stopless\\Findertech\\FinderApp2.0\\platforms\\android\\app\\build\\intermediates\\assets\\debug
-15.path=www/img/logoft.jpg
+15.path=www/img/finderprices.png
 14.baseType=DIRECTORY
 17.base=C\:\\Users\\Stopless\\Findertech\\FinderApp2.0\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 10.base=C\:\\Users\\Stopless\\Findertech\\FinderApp2.0\\platforms\\android\\app\\build\\intermediates\\assets\\debug
@@ -51,7 +51,7 @@ count=21
 3.baseType=DIRECTORY
 5.set=ASSET
 9.base=C\:\\Users\\Stopless\\Findertech\\FinderApp2.0\\platforms\\android\\app\\build\\intermediates\\assets\\debug
-16.path=www/css/fawes.css
+16.path=www/img/logoft.jpg
 18.base=C\:\\Users\\Stopless\\Findertech\\FinderApp2.0\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 5.baseType=DIRECTORY
 11.base=C\:\\Users\\Stopless\\Findertech\\FinderApp2.0\\platforms\\android\\app\\build\\intermediates\\assets\\debug
