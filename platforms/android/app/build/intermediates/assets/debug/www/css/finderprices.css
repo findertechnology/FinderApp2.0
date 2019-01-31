@@ -55,6 +55,10 @@ h3{
 .mvir{
 	width: 47%;
 	background-color: black;
+	display: inline-block; 
+	margin: 5px; 
+	height: 60px; 
+	padding-top: 10px;
 }
 @media only screen and (max-width: 410px) {
 	.mvir {
@@ -64,6 +68,9 @@ h3{
 	}
 	.info{
 		padding-left: 10%;
+	}
+	#adv{
+		display: none;
 	}
 }
 
@@ -75,4 +82,30 @@ span{
 	padding-top: 5px;
 	padding-right: 2px;
 	padding-bottom: 2px;
+}
+
+.inf{
+	color: white;
+	width: 92%;
+	border-radius: 3px;
+}
+
+#adv{
+	margin-top: 2%;
+	margin-left: 5%;
+	margin-bottom: 0px;
+	padding: 10px;
+	color: #F3F3EB;
+	background-color: #555;
+	border: 0px;
+	border-radius: 4px;
+	text-align: center;
+	font-size: 18px;
+	font-family: Verdana, sans-serif;
+	width: 90%;
+	
+}
+
+#adv:hover{
+	background-color: #444;
 }

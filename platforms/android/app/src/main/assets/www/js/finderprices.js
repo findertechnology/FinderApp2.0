@@ -1,4 +1,48 @@
-
+	var a = 0;
+	function advan(){
+		var mvir = document.getElementsByClassName("mvir");
+		var info = document.getElementsByClassName("info");
+		var adv = document.getElementById("adv");
+		
+		if(a == 0){
+			for(var i = 0; i < mvir.length; i++){
+				mvir[i].style.width = "92%";
+				mvir[i].style.paddingLeft = "5%";
+			}
+			for(var i = 0; i < info.length; i++){
+				info[i].style.paddingLeft = "10%";
+			}
+			adv.innerHTML = "Modo basico";
+			$( function() {
+				$( "#acord" ).accordion({
+					collapsible: true,
+					active: false,
+					disabled: false
+				});
+			} );
+			a = 1;
+		}else{
+			for(var i = 0; i < mvir.length; i++){
+				mvir[i].style.width = "47%";
+				mvir[i].style.paddingLeft = "0%";
+			}
+			for(var i = 0; i < info.length; i++){
+				info[i].style.paddingLeft = "0%";
+			}
+			adv.innerHTML = "Modo avanzado";
+			$( function() {
+				$( "#acord" ).accordion({
+					collapsible: true,
+					active: false,
+					disabled: true
+				});
+			} );
+			
+			a = 0;
+		}
+		
+	}
+	
 	function getBTC(){
 	 var objHttp=null;
 	 if(window.XMLHttpRequest) {
@@ -16,12 +60,12 @@
 	 var val = parseFloat(obj.ticker.price).toFixed(0);
 	 var num = (parseFloat(obj.ticker.change)/val)*100;
 	 if(obj.ticker.change < 0){
-	 tipe.innerHTML = val+ " € <span style='color: red;'><i class='fa fa-chevron-down' aria-hidden='true'></i>( "+ num.toFixed(2)+" % )</span>";
+	 tipe.innerHTML = val+ " &#8364; <span style='color: red;'><i class='fa fa-chevron-down' aria-hidden='true'></i>( "+ num.toFixed(2)+" % )</span>";
 	 }else{
 	if(obj.ticker.change == 0){
-	tipe.innerHTML = val+" € <span style='color: gray;'><i class='fa fa-minus' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
+	tipe.innerHTML = val+" &#8364; <span style='color: gray;'><i class='fa fa-minus' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
 	}else{
-	 tipe.innerHTML = val+" € <span style='color: green;'><i class='fa fa-chevron-up' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
+	 tipe.innerHTML = val+" &#8364; <span style='color: green;'><i class='fa fa-chevron-up' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
 	 } }
 	 } 
 	 }
@@ -44,12 +88,12 @@
 	 var val = parseFloat(obj.ticker.price).toFixed(0);
 	var num = (parseFloat(obj.ticker.change)/val)*100;
 	if(obj.ticker.change < 0){
-	 tipe.innerHTML = val+ " € <span style='color: red;'><i class='fa fa-chevron-down' aria-hidden='true'></i>( "+ num.toFixed(2)+" % )</span>";
+	 tipe.innerHTML = val+ " &#8364; <span style='color: red;'><i class='fa fa-chevron-down' aria-hidden='true'></i>( "+ num.toFixed(2)+" % )</span>";
 	 }else{
 	if(obj.ticker.change == 0){
-	tipe.innerHTML = val+" € <span style='color: gray;'><i class='fa fa-minus' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
+	tipe.innerHTML = val+" &#8364; <span style='color: gray;'><i class='fa fa-minus' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
 	}else{
-	 tipe.innerHTML = val+" € <span style='color: green;'><i class='fa fa-chevron-up' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
+	 tipe.innerHTML = val+" &#8364; <span style='color: green;'><i class='fa fa-chevron-up' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
 	 } }
 	 } 
 	 }
@@ -72,12 +116,12 @@
 	 var val = parseFloat(obj.ticker.price).toFixed(1);
 	 var num = (parseFloat(obj.ticker.change)/val)*100;
 	 if(obj.ticker.change < 0){
-	 tipe.innerHTML = val+ " € <span style='color: red;'><i class='fa fa-chevron-down' aria-hidden='true'></i>( "+ num.toFixed(2)+" % )</span>";
+	 tipe.innerHTML = val+ " &#8364; <span style='color: red;'><i class='fa fa-chevron-down' aria-hidden='true'></i>( "+ num.toFixed(2)+" % )</span>";
 	 }else{
 	if(obj.ticker.change == 0){
-	tipe.innerHTML = val+" € <span style='color: gray;'><i class='fa fa-minus' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
+	tipe.innerHTML = val+" &#8364; <span style='color: gray;'><i class='fa fa-minus' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
 	}else{
-	 tipe.innerHTML = val+" € <span style='color: green;'><i class='fa fa-chevron-up' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
+	 tipe.innerHTML = val+" &#8364; <span style='color: green;'><i class='fa fa-chevron-up' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
 	 } }
 	 } 
 	 }
@@ -100,12 +144,12 @@
 	 var val = parseFloat(obj.ticker.price).toFixed(2);
 	 var num = (parseFloat(obj.ticker.change)/val)*100;
 	 if(obj.ticker.change < 0){
-	 tipe.innerHTML = val+ " € <span style='color: red;'><i class='fa fa-chevron-down' aria-hidden='true'></i>( "+ num.toFixed(2)+" % )</span>";
+	 tipe.innerHTML = val+ " &#8364; <span style='color: red;'><i class='fa fa-chevron-down' aria-hidden='true'></i>( "+ num.toFixed(2)+" % )</span>";
 	 }else{
 	if(obj.ticker.change == 0){
-	tipe.innerHTML = val+" € <span style='color: gray;'><i class='fa fa-minus' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
+	tipe.innerHTML = val+" &#8364; <span style='color: gray;'><i class='fa fa-minus' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
 	}else{
-	 tipe.innerHTML = val+" € <span style='color: green;'><i class='fa fa-chevron-up' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
+	 tipe.innerHTML = val+" &#8364; <span style='color: green;'><i class='fa fa-chevron-up' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
 	 } }
 	 } 
 	 }
@@ -128,12 +172,12 @@
 	 var val = parseFloat(obj.ticker.price).toFixed(2);
 	 var num = (parseFloat(obj.ticker.change)/val)*100;
 	 if(obj.ticker.change < 0){
-	 tipe.innerHTML = val+ " € <span style='color: red;'><i class='fa fa-chevron-down' aria-hidden='true'></i>( "+ num.toFixed(2)+" % )</span>";
+	 tipe.innerHTML = val+ " &#8364; <span style='color: red;'><i class='fa fa-chevron-down' aria-hidden='true'></i>( "+ num.toFixed(2)+" % )</span>";
 	 }else{
 	if(obj.ticker.change == 0){
-	tipe.innerHTML = val+" € <span style='color: gray;'><i class='fa fa-minus' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
+	tipe.innerHTML = val+" &#8364; <span style='color: gray;'><i class='fa fa-minus' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
 	}else{
-	 tipe.innerHTML = val+" € <span style='color: green;'><i class='fa fa-chevron-up' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
+	 tipe.innerHTML = val+" &#8364; <span style='color: green;'><i class='fa fa-chevron-up' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
 	 } }
 	 } 
 	 }
@@ -156,12 +200,12 @@
 	 var val = parseFloat(obj.ticker.price).toFixed(1);
 	 var num = (parseFloat(obj.ticker.change)/val)*100;
 	if(obj.ticker.change < 0){
-	 tipe.innerHTML = val+ " € <span style='color: red;'><i class='fa fa-chevron-down' aria-hidden='true'></i>( "+ num.toFixed(2)+" % )</span>";
+	 tipe.innerHTML = val+ " &#8364; <span style='color: red;'><i class='fa fa-chevron-down' aria-hidden='true'></i>( "+ num.toFixed(2)+" % )</span>";
 	 }else{
 	if(obj.ticker.change == 0){
-	tipe.innerHTML = val+" € <span style='color: gray;'><i class='fa fa-minus' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
+	tipe.innerHTML = val+" &#8364; <span style='color: gray;'><i class='fa fa-minus' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
 	}else{
-	 tipe.innerHTML = val+" € <span style='color: green;'><i class='fa fa-chevron-up' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
+	 tipe.innerHTML = val+" &#8364; <span style='color: green;'><i class='fa fa-chevron-up' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
 	 } }
 	 } 
 	 }
@@ -184,12 +228,12 @@
 	 var val = parseFloat(obj.ticker.price).toFixed(1);
 	 var num = (parseFloat(obj.ticker.change)/val)*100;
 	if(obj.ticker.change < 0){
-	 tipe.innerHTML = val+ " € <span style='color: red;'><i class='fa fa-chevron-down' aria-hidden='true'></i>( "+ num.toFixed(2)+" % )</span>";
+	 tipe.innerHTML = val+ " &#8364; <span style='color: red;'><i class='fa fa-chevron-down' aria-hidden='true'></i>( "+ num.toFixed(2)+" % )</span>";
 	 }else{
 	if(obj.ticker.change == 0){
-	tipe.innerHTML = val+" € <span style='color: gray;'><i class='fa fa-minus' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
+	tipe.innerHTML = val+" &#8364; <span style='color: gray;'><i class='fa fa-minus' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
 	}else{
-	 tipe.innerHTML = val+" € <span style='color: green;'><i class='fa fa-chevron-up' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
+	 tipe.innerHTML = val+" &#8364; <span style='color: green;'><i class='fa fa-chevron-up' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
 	 } }
 	 } 
 	 }
@@ -212,12 +256,12 @@
 	 var val = parseFloat(obj.ticker.price).toFixed(1);
 	 var num = (parseFloat(obj.ticker.change)/val)*100;
 	if(obj.ticker.change < 0){
-	 tipe.innerHTML = val+ " € <span style='color: red;'><i class='fa fa-chevron-down' aria-hidden='true'></i>( "+ num.toFixed(2)+" % )</span>";
+	 tipe.innerHTML = val+ " &#8364; <span style='color: red;'><i class='fa fa-chevron-down' aria-hidden='true'></i>( "+ num.toFixed(2)+" % )</span>";
 	 }else{
 	if(obj.ticker.change == 0){
-	tipe.innerHTML = val+" € <span style='color: gray;'><i class='fa fa-minus' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
+	tipe.innerHTML = val+" &#8364; <span style='color: gray;'><i class='fa fa-minus' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
 	}else{
-	 tipe.innerHTML = val+" € <span style='color: green;'><i class='fa fa-chevron-up' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
+	 tipe.innerHTML = val+" &#8364; <span style='color: green;'><i class='fa fa-chevron-up' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
 	 } }
 	 } 
 	 }
@@ -240,12 +284,12 @@
 	 var val = parseFloat(obj.ticker.price).toFixed(2);
 	 var num = (parseFloat(obj.ticker.change)/val)*100;
 	if(obj.ticker.change < 0){
-	 tipe.innerHTML = val+ " € <span style='color: red;'><i class='fa fa-chevron-down' aria-hidden='true'></i>( "+ num.toFixed(2)+" % )</span>";
+	 tipe.innerHTML = val+ " &#8364; <span style='color: red;'><i class='fa fa-chevron-down' aria-hidden='true'></i>( "+ num.toFixed(2)+" % )</span>";
 	 }else{
 	if(obj.ticker.change == 0){
-	tipe.innerHTML = val+" € <span style='color: gray;'><i class='fa fa-minus' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
+	tipe.innerHTML = val+" &#8364; <span style='color: gray;'><i class='fa fa-minus' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
 	}else{
-	 tipe.innerHTML = val+" € <span style='color: green;'><i class='fa fa-chevron-up' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
+	 tipe.innerHTML = val+" &#8364; <span style='color: green;'><i class='fa fa-chevron-up' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
 	 } }
 	 } 
 	 }
@@ -268,12 +312,12 @@
 	 var val = parseFloat(obj.ticker.price).toFixed(1);
 	 var num = (parseFloat(obj.ticker.change)/val)*100;
 	if(obj.ticker.change < 0){
-	 tipe.innerHTML = val+ " € <span style='color: red;'><i class='fa fa-chevron-down' aria-hidden='true'></i>( "+ num.toFixed(2)+" % )</span>";
+	 tipe.innerHTML = val+ " &#8364; <span style='color: red;'><i class='fa fa-chevron-down' aria-hidden='true'></i>( "+ num.toFixed(2)+" % )</span>";
 	 }else{
 	if(obj.ticker.change == 0){
-	tipe.innerHTML = val+" € <span style='color: gray;'><i class='fa fa-minus' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
+	tipe.innerHTML = val+" &#8364; <span style='color: gray;'><i class='fa fa-minus' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
 	}else{
-	 tipe.innerHTML = val+" € <span style='color: green;'><i class='fa fa-chevron-up' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
+	 tipe.innerHTML = val+" &#8364; <span style='color: green;'><i class='fa fa-chevron-up' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
 	 } }
 	 } 
 	 }
@@ -296,12 +340,12 @@
 	 var val = parseFloat(obj.ticker.price).toFixed(3);
 	 var num = (parseFloat(obj.ticker.change)/val)*100;
 	if(obj.ticker.change < 0){
-	 tipe.innerHTML = val+ " € <span style='color: red;'><i class='fa fa-chevron-down' aria-hidden='true'></i>( "+ num.toFixed(2)+" % )</span>";
+	 tipe.innerHTML = val+ " &#8364; <span style='color: red;'><i class='fa fa-chevron-down' aria-hidden='true'></i>( "+ num.toFixed(2)+" % )</span>";
 	 }else{
 	if(obj.ticker.change == 0){
-	tipe.innerHTML = val+" € <span style='color: gray;'><i class='fa fa-minus' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
+	tipe.innerHTML = val+" &#8364; <span style='color: gray;'><i class='fa fa-minus' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
 	}else{
-	 tipe.innerHTML = val+" € <span style='color: green;'><i class='fa fa-chevron-up' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
+	 tipe.innerHTML = val+" &#8364; <span style='color: green;'><i class='fa fa-chevron-up' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
 	 } }
 	 } 
 	 }
@@ -324,12 +368,12 @@
 	 var val = parseFloat(obj.ticker.price).toFixed(2);
 	 var num = (parseFloat(obj.ticker.change)/val)*100;
 	if(obj.ticker.change < 0){
-	 tipe.innerHTML = val+ " € <span style='color: red;'><i class='fa fa-chevron-down' aria-hidden='true'></i>( "+ num.toFixed(2)+" % )</span>";
+	 tipe.innerHTML = val+ " &#8364; <span style='color: red;'><i class='fa fa-chevron-down' aria-hidden='true'></i>( "+ num.toFixed(2)+" % )</span>";
 	 }else{
 	if(obj.ticker.change == 0){
-	tipe.innerHTML = val+" € <span style='color: gray;'><i class='fa fa-minus' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
+	tipe.innerHTML = val+" &#8364; <span style='color: gray;'><i class='fa fa-minus' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
 	}else{
-	 tipe.innerHTML = val+" € <span style='color: green;'><i class='fa fa-chevron-up' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
+	 tipe.innerHTML = val+" &#8364; <span style='color: green;'><i class='fa fa-chevron-up' aria-hidden='true'></i>( "+ num.toFixed(2) +" % )</span>";
 	 } }
 	 } 
 	 }
@@ -350,5 +394,7 @@
 	 getADA();
 	 getNEO();
 	}
+
 	getPrices();
 	setInterval("getPrices()",5000);
+	

@@ -1,4 +1,4 @@
-#Thu Jan 31 10:38:39 CET 2019
+#Thu Jan 31 17:28:40 CET 2019
 base.0=C\:\\Users\\Stopless\\Findertech\\FinderApp2.0\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex
