@@ -1,3 +1,33 @@
+	
+	var a = 0;
+	
+	function changeResol(){
+		var wid= document.getElementsByTagName('body')[0].clientWidth;
+		var mvir = document.getElementsByClassName("mvir");
+		var info = document.getElementsByClassName("info");
+		var adv = document.getElementById("adv");
+		if(wid < 410){
+			if(mvir[0].style.width == "47%"){
+				for(var i = 0; i < mvir.length; i++){
+					mvir[i].style.width = "92%";
+					mvir[i].style.paddingLeft = "5%";
+				}
+				for(var i = 0; i < info.length; i++){
+					info[i].style.paddingLeft = "10%";
+				}
+				$( function() {
+					$( "#acord" ).accordion({
+						collapsible: true,
+						active: false,
+						disabled: false
+					});
+				} );
+				adv.innerHTML = "Modo b&aacute;sico";
+				a= 1;
+			}
+		}
+		
+	}
 	var a = 0;
 	function advan(){
 		var mvir = document.getElementsByClassName("mvir");
@@ -12,7 +42,7 @@
 			for(var i = 0; i < info.length; i++){
 				info[i].style.paddingLeft = "10%";
 			}
-			adv.innerHTML = "Modo basico";
+			adv.innerHTML = "Modo b&aacute;sico";
 			$( function() {
 				$( "#acord" ).accordion({
 					collapsible: true,
@@ -397,4 +427,5 @@
 
 	getPrices();
 	setInterval("getPrices()",5000);
+	setInterval("changeResol()",100);
 	
