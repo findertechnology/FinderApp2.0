@@ -1,12 +1,21 @@
 	
 	var a = 0;
+	var lastRes = 0;
 	
+
 	function changeResol(){
 		var wid= document.getElementsByTagName('body')[0].clientWidth;
 		var mvir = document.getElementsByClassName("mvir");
 		var info = document.getElementsByClassName("info");
 		var adv = document.getElementById("adv");
 		if(wid < 410){
+			$( function() {
+				$( "#acord" ).accordion({
+					collapsible: true,
+					active: false,
+					disabled: false
+				});
+			} );
 			if(mvir[0].style.width == "47%"){
 				for(var i = 0; i < mvir.length; i++){
 					mvir[i].style.width = "92%";
@@ -15,20 +24,39 @@
 				for(var i = 0; i < info.length; i++){
 					info[i].style.paddingLeft = "10%";
 				}
-				$( function() {
-					$( "#acord" ).accordion({
-						collapsible: true,
-						active: false,
-						disabled: false
-					});
-				} );
 				adv.innerHTML = "Modo b&aacute;sico";
 				a= 1;
 			}
+		}else{
+			for(var i = 0; i < mvir.length; i++){
+				mvir[i].style.width = "47%";
+				mvir[i].style.paddingLeft = "0%";
+			}
+			for(var i = 0; i < info.length; i++){
+				info[i].style.paddingLeft = "00%";
+			}
+			adv.innerHTML = "Modo avanzado";
+			$( function() {
+				$( "#acord" ).accordion({
+					collapsible: true,
+					active: false,
+					disabled: true
+				});
+			} );
 		}
 		
 	}
-	var a = 0;
+	
+	function ch(){
+		var wid= document.getElementsByTagName('body')[0].clientWidth;
+		if(wid == lastRes){
+			
+		}else{
+			lastRes = wid;
+			changeResol();
+		}
+	}
+	
 	function advan(){
 		var mvir = document.getElementsByClassName("mvir");
 		var info = document.getElementsByClassName("info");
@@ -427,5 +455,5 @@
 
 	getPrices();
 	setInterval("getPrices()",5000);
-	setInterval("changeResol()",100);
+	setInterval("ch()",100);
 	
